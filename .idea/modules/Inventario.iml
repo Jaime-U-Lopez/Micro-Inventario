@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="Inventario" external.linked.project.path="$MODULE_DIR$/../../Inventario/Inventario" external.root.project.path="$MODULE_DIR$/../../Inventario/Inventario" external.system.id="GRADLE" external.system.module.group="com.Teo" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../Inventario/Inventario">
+      <excludeFolder url="file://$MODULE_DIR$/../../Inventario/Inventario/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Inventario/Inventario/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

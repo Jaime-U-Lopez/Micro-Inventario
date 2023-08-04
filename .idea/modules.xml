@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Inventario.iml" filepath="$PROJECT_DIR$/.idea/modules/Inventario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Inventario.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Inventario.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Inventario.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Inventario.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/InventarioInicial.iml" filepath="$PROJECT_DIR$/.idea/modules/InventarioInicial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/InventarioInicial.main.iml" filepath="$PROJECT_DIR$/.idea/modules/InventarioInicial.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/InventarioInicial.test.iml" filepath="$PROJECT_DIR$/.idea/modules/InventarioInicial.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Micro-Inventario.iml" filepath="$PROJECT_DIR$/.idea/Micro-Inventario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UsuariosInventario.iml" filepath="$PROJECT_DIR$/.idea/modules/UsuariosInventario.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UsuariosInventario.main.iml" filepath="$PROJECT_DIR$/.idea/modules/UsuariosInventario.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/UsuariosInventario.test.iml" filepath="$PROJECT_DIR$/.idea/modules/UsuariosInventario.test.iml" />
     </modules>
   </component>
 </project>
