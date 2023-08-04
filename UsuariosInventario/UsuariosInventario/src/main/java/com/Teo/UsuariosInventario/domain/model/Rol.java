@@ -1,6 +1,6 @@
-package com.pragma.usuariomicroservice.domain.model;
+package com.Teo.UsuariosInventario.domain.model;
 
-import com.pragma.usuariomicroservice.adapters.http.dto.RolNombre;
+
 
 public class Rol {
     private Long id;

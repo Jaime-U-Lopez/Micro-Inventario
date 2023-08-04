@@ -1,8 +1,7 @@
-package com.pragma.usuariomicroservice.domain.usecase;
+package com.Teo.UsuariosInventario.domain.usecase;
 
 import com.pragma.usuariomicroservice.domain.api.IRolServicePort;
 import com.pragma.usuariomicroservice.domain.model.Rol;
-import com.pragma.usuariomicroservice.domain.model.Usuario;
 import com.pragma.usuariomicroservice.domain.spi.IRolPersistencePort;
 
 import java.util.List;

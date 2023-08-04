@@ -1,48 +1,29 @@
-package com.pragma.usuariomicroservice.domain.model;
-
-import com.pragma.usuariomicroservice.adapters.jpa.mysql.entity.RolEntity;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
+package com.Teo.UsuariosInventario.domain.model;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class Usuario {
     private Long id;
-    private String nombre;
-    private String apellido;
-    private String numeroDocumento;
-    private String celular;
-    private String fechaNacimiento;
-    private String correo;
-    private String password;
+    private Persona persona;
+    private String nombreUsuario;
+    private String departamento;
+    private String estado;
+    private String grupo;
+    private Rol rol;
+    private String almacen;
+   private Set<Rol> roles = new HashSet<>();
 
-    private Set<Rol> roles = new HashSet<>();
-
-    public void setIdDniType(String idDniType) {
-    }
-
-    public Usuario(Long id, String nombre, String apellido, String numeroDocumento, String celular, String fechaNacimiento, String correo, String password, Set<Rol> roles) {
+    public Usuario(Long id, Persona persona, String nombreUsuario, String departamento, String estado, String grupo, Rol rol, String almacen, Set<Rol> roles) {
         this.id = id;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.numeroDocumento = numeroDocumento;
-        this.celular = celular;
-        this.fechaNacimiento = fechaNacimiento;
-        this.correo = correo;
-        this.password = password;
+        this.persona = persona;
+        this.nombreUsuario = nombreUsuario;
+        this.departamento = departamento;
+        this.estado = estado;
+        this.grupo = grupo;
+        this.rol = rol;
+        this.almacen = almacen;
         this.roles = roles;
-    }
-
-    public Usuario() {
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
     }
 
     public Long getId() {
@@ -53,55 +34,61 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public Persona getPersona() {
+        return persona;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setPersona(Persona persona) {
+        this.persona = persona;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
     }
 
-    public String getNumeroDocumento() {
-        return numeroDocumento;
+    public String getDepartamento() {
+        return departamento;
     }
 
-    public void setNumeroDocumento(String numeroDocumento) {
-        this.numeroDocumento = numeroDocumento;
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
     }
 
-    public String getCelular() {
-        return celular;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setCelular(String celular) {
-        this.celular = celular;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
+    public String getGrupo() {
+        return grupo;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setGrupo(String grupo) {
+        this.grupo = grupo;
     }
 
-
-    public String getPassword() {
-        return password;
+    public Rol getRol() {
+        return rol;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 
+    public String getAlmacen() {
+        return almacen;
+    }
+
+    public void setAlmacen(String almacen) {
+        this.almacen = almacen;
+    }
 
     public Set<Rol> getRoles() {
         return roles;
@@ -111,3 +98,7 @@ public class Usuario {
         this.roles = roles;
     }
 }
+
+
+
+

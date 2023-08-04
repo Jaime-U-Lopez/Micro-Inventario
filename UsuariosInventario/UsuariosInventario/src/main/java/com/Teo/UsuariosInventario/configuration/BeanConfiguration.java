@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.configuration;
+package com.Teo.UsuariosInventario.configuration;
 
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.adapter.RolMysqlAdapter;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.adapter.UsuarioMysqlAdapter;
@@ -6,7 +6,6 @@ import com.pragma.usuariomicroservice.adapters.jpa.mysql.mapper.RolEntityMapper;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.mapper.UsuarioEntityMapper;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.repository.IRolRepository;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.repository.IUsuarioRepository;
-import com.pragma.usuariomicroservice.configuration.security.service.UserDetailsServiceImpl;
 import com.pragma.usuariomicroservice.domain.api.IRolServicePort;
 import com.pragma.usuariomicroservice.domain.api.IUsuarioServicePort;
 import com.pragma.usuariomicroservice.domain.spi.IRolPersistencePort;
@@ -16,7 +15,6 @@ import com.pragma.usuariomicroservice.domain.usecase.UsuarioUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.core.userdetails.UserDetailsService;
 
 @Configuration
 @RequiredArgsConstructor

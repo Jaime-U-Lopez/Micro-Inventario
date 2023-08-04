@@ -1,9 +1,6 @@
-package com.pragma.usuariomicroservice.domain.spi;
+package com.Teo.UsuariosInventario.domain.spi;
 
-import com.pragma.usuariomicroservice.adapters.jpa.mysql.entity.UsuarioEntity;
 import com.pragma.usuariomicroservice.domain.model.Usuario;
-
-import java.util.Optional;
 
 public interface IUsuarioPersistencePort {
 

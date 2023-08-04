@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.configuration;
+package com.Teo.UsuariosInventario.configuration;
 
 import com.pragma.usuariomicroservice.adapters.http.exceptions.*;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.exceptions.UsuarioYaExistenteException;

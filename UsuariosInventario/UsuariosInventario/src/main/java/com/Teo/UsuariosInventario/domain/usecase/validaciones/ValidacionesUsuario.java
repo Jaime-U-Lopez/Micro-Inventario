@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.domain.usecase.validaciones;
+package com.Teo.UsuariosInventario.domain.usecase.validaciones;
 
 import com.pragma.usuariomicroservice.adapters.http.exceptions.ContraseñaErrada;
 import com.pragma.usuariomicroservice.adapters.http.exceptions.NoEsMayorDeEdadException;

@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.configuration;
+package com.Teo.UsuariosInventario.configuration;
 
 public class Constants {
 

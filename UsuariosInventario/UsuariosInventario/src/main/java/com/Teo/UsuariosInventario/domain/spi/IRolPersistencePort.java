@@ -1,7 +1,6 @@
-package com.pragma.usuariomicroservice.domain.spi;
+package com.Teo.UsuariosInventario.domain.spi;
 
 import com.pragma.usuariomicroservice.domain.model.Rol;
-import com.pragma.usuariomicroservice.domain.model.Usuario;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.domain.usecase;
+package com.Teo.UsuariosInventario.domain.usecase;
 
 import com.pragma.usuariomicroservice.adapters.http.dto.RolNombre;
 import com.pragma.usuariomicroservice.adapters.http.exceptions.UsuarioExcepcionRolNoExiste;

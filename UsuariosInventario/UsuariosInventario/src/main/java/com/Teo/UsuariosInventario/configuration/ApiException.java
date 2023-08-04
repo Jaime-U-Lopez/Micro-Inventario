@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.configuration;
+package com.Teo.UsuariosInventario.configuration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,10 +1,7 @@
-package com.pragma.usuariomicroservice.configuration.security.service;
+package com.Teo.UsuariosInventario.configuration.security.service;
 
-import com.pragma.usuariomicroservice.adapters.jpa.mysql.adapter.UsuarioMysqlAdapter;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.entity.UsuarioEntity;
-
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.entity.UsuarioPrincipal;
-import com.pragma.usuariomicroservice.adapters.jpa.mysql.mapper.UsuarioEntityMapper;
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.repository.IUsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

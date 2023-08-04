@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.configuration.security.jwt;
+package com.Teo.UsuariosInventario.configuration.security.jwt;
 
 
 import com.pragma.usuariomicroservice.adapters.jpa.mysql.entity.UsuarioPrincipal;

@@ -1,4 +1,4 @@
-package com.pragma.usuariomicroservice.configuration;
+package com.Teo.UsuariosInventario.configuration;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
