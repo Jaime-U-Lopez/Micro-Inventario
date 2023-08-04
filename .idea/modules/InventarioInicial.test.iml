@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id="InventarioInicial:test" external.linked.project.path="$MODULE_DIR$/../../InventarioInicial/InventarioInicial" external.root.project.path="$MODULE_DIR$/../../InventarioInicial/InventarioInicial" external.system.id="GRADLE" external.system.module.group="com.Teo" external.system.module.type="sourceSet" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
-    <output-test url="file://$MODULE_DIR$/../../InventarioInicial/InventarioInicial/build/classes/java/test" />
+    <output-test url="file://$MODULE_DIR$/../../InventarioInicialu/InventarioInicial/build/classes/java/test" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../InventarioInicial/InventarioInicial/src/test">
-      <sourceFolder url="file://$MODULE_DIR$/../../InventarioInicial/InventarioInicial/src/test/java" isTestSource="true" />
+    <content url="file://$MODULE_DIR$/../../InventarioInicialu/InventarioInicial/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../InventarioInicialu/InventarioInicial/src/test/java" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
