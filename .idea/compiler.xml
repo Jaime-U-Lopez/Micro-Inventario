@@ -10,5 +10,13 @@
         </processorPath>
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Inventario" target="17" />
+      <module name="Inventario.main" target="17" />
+      <module name="Inventario.test" target="17" />
+      <module name="InventarioInicial" target="17" />
+      <module name="InventarioInicial.main" target="17" />
+      <module name="InventarioInicial.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
