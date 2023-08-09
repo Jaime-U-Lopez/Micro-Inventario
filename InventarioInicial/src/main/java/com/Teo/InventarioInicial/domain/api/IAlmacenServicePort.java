@@ -8,7 +8,7 @@ public interface IAlmacenServicePort {
 
     void saveAlmacen(Almacen almacen);
 
-    void deleteALmacen(Almacen almacen);
+    void deleteALmacen(Long id);
 
     Almacen getAlmacen(Long id);
 

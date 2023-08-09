@@ -23,8 +23,9 @@ public class AlmacenUseCase implements IAlmacenServicePort {
         almacenPersistencePort.save(almacen);
     }
     @Override
-    public void deleteALmacen(Almacen almacen) {
-        almacenPersistencePort.delete(almacen);
+    public void deleteALmacen(Long id) {
+
+        almacenPersistencePort.delete(id);
     }
     @Override
     public Almacen getAlmacen(Long id) {

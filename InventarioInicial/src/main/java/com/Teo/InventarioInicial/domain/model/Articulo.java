@@ -9,8 +9,8 @@ public class Articulo {
     private Almacen almacen;
 
 
-    public Articulo(Long id, String nombreArticulo, String codigoArticulo, String ubicacion, Almacen almacen) {
-        this.id = id;
+    public Articulo( String nombreArticulo, String codigoArticulo, String ubicacion, Almacen almacen) {
+
         this.nombreArticulo = nombreArticulo;
         this.codigoArticulo = codigoArticulo;
         this.ubicacion = ubicacion;

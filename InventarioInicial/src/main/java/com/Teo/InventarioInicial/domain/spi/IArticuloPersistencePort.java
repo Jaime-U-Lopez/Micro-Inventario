@@ -7,7 +7,7 @@ import java.util.List;
 public interface IArticuloPersistencePort {
 
     void save(Articulo articulo);
-    void delete(Articulo articulo);
+    void delete(Long id);
     Articulo getArticulo(Long id);
     List<Articulo> getAllArticulo();
 }

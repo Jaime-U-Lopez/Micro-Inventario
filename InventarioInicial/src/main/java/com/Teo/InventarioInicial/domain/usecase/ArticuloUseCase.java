@@ -27,11 +27,13 @@ public class ArticuloUseCase implements IArticuloServicePort {
 
     @Override
     public void saveArticulo(Articulo articulo) {
+
+
         articuloPersistencePort.save(articulo);
     }
     @Override
-    public void deleteArticulo(Articulo articulo) {
-        articuloPersistencePort.delete(articulo);
+    public void deleteArticulo(Long id) {
+        articuloPersistencePort.delete(id);
     }
     @Override
     public Articulo getArticulo(Long id) {

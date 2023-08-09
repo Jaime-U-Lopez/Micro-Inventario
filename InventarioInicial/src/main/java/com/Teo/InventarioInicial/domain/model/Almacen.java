@@ -7,8 +7,8 @@ public class Almacen {
     private String direccion;
 
 
-    public Almacen(Long id, String nombre, String direccion) {
-        this.id = id;
+    public Almacen( String nombre, String direccion) {
+
         this.nombre = nombre;
         this.direccion = direccion;
     }

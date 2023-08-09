@@ -8,7 +8,7 @@ import java.util.List;
 public interface IAlmacenPersistencePort {
 
     void save(Almacen almacen);
-    void delete(Almacen almacen);
+    void delete(Long id);
     Almacen getAlmacen(Long id);
     List<Almacen> getAllAlmacen();
 

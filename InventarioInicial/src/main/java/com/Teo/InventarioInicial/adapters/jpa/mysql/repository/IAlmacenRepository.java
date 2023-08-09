@@ -10,8 +10,7 @@ import java.util.Optional;
 @Repository
 public interface IAlmacenRepository extends JpaRepository<AlmacenEntity, Long> {
 
-
-        //Optional<AlmacenEntity> findAlmacenByDNI(String numeroDocumento);
+        Optional<AlmacenEntity> findAlmacenByid(String id);
 
 
 

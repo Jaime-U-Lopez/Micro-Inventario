@@ -11,7 +11,7 @@ public interface IArticuloServicePort {
 
     void saveArticulo(Articulo articulo);
 
-    void deleteArticulo(Articulo articulo);
+    void deleteArticulo(Long id);
 
     Articulo getArticulo(Long id);
 
