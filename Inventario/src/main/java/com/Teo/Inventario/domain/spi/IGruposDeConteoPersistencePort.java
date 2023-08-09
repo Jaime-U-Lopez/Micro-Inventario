@@ -4,7 +4,7 @@ import com.pragma.usuariomicroservice.domain.model.Rol;
 
 import java.util.List;
 
-public interface IRolPersistencePort {
+public interface IGruposDeConteoPersistencePort {
 
     List<Rol> getAllRoles();
 
