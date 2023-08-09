@@ -26,7 +26,7 @@ public class ArticuloMysqlAdapter implements IArticuloPersistencePort {
 
     @Override
     public void save(Articulo articulo) {
-        articuloRepository.save(articuloEntityMapper.articulotoArticuloEntity(articulo));
+        articuloRepository.save(articuloEntityMapper.articuloToArticuloEntity(articulo));
     }
 
     @Override

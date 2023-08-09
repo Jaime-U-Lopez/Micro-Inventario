@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T14:56:51-0500",
+    date = "2023-08-09T14:52:48-0500",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 19.0.2 (Amazon.com Inc.)"
 )
 @Component
@@ -26,14 +26,14 @@ public class ArticuloEntityMapperImpl implements ArticuloEntityMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
-        Integer cantidad = null;
         Almacen almacen = null;
+        String cantidad = null;
 
         nombreArticulo = articuloEntity.getNombreArticulo();
         codigoArticulo = articuloEntity.getCodigoArticulo();
         ubicacion = articuloEntity.getUbicacion();
-        cantidad = articuloEntity.getCantidad();
         almacen = almacenEntityToAlmacen( articuloEntity.getAlmacen() );
+        cantidad = articuloEntity.getCantidad();
 
         Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
@@ -50,7 +50,6 @@ public class ArticuloEntityMapperImpl implements ArticuloEntityMapper {
 
         ArticuloEntity articuloEntity = new ArticuloEntity();
 
-        articuloEntity.setCantidad( articulo.getCantidad() );
         articuloEntity.setId( articulo.getId() );
         articuloEntity.setNombreArticulo( articulo.getNombreArticulo() );
         articuloEntity.setCodigoArticulo( articulo.getCodigoArticulo() );

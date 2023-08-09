@@ -43,7 +43,7 @@ private final IArticuloRequestMapper articuloRequestMapper;
           throw  new AlmacenException(Constants.ALMACEN_NO_REGISTRADO);
        }
 
-        Articulo articulo = new Articulo(articuloRequestDto.getNombreArticulo(),articuloRequestDto.getCodigoArticulo(),articuloRequestDto.getUbicacion(),almacenRequestMapper.almacenEntityToAlmacen(optionalAlmacenEntity.get()));
+        Articulo articulo = new Articulo(articuloRequestDto.getNombreArticulo(),articuloRequestDto.getCodigoArticulo(),articuloRequestDto.getUbicacion(),articuloRequestDto.getCantidad(), almacenRequestMapper.almacenEntityToAlmacen(optionalAlmacenEntity.get()));
 
         articuloServicePort.saveArticulo(articulo);
     }

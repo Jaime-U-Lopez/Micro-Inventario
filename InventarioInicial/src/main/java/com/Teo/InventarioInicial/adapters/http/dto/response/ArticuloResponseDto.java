@@ -19,13 +19,16 @@ public class ArticuloResponseDto {
 
     private String ubicacion;
 
+    private Integer cantidad;
+
     private AlmacenEntity almacen;
 
-    public ArticuloResponseDto(Long id, String nombreArticulo, String codigoArticulo, String ubicacion, AlmacenEntity almacen) {
+    public ArticuloResponseDto(Long id, String nombreArticulo, String codigoArticulo, String ubicacion, Integer cantidad, AlmacenEntity almacen) {
         this.id = id;
         this.nombreArticulo = nombreArticulo;
         this.codigoArticulo = codigoArticulo;
         this.ubicacion = ubicacion;
+        this.cantidad = cantidad;
         this.almacen = almacen;
     }
 }

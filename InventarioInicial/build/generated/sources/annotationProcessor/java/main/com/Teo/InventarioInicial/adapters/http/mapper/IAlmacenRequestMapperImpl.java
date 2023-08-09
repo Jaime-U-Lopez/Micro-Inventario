@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T12:52:19-0500",
+    date = "2023-08-09T14:33:47-0500",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 19.0.2 (Amazon.com Inc.)"
 )
 @Component
@@ -23,9 +23,6 @@ public class IAlmacenRequestMapperImpl implements IAlmacenRequestMapper {
 
         String nombre = null;
         String direccion = null;
-
-        nombre = almacenRequestDto.getNombre();
-        direccion = almacenRequestDto.getDireccion();
 
         Almacen almacen = new Almacen( nombre, direccion );
 
@@ -58,9 +55,6 @@ public class IAlmacenRequestMapperImpl implements IAlmacenRequestMapper {
         }
 
         AlmacenEntity almacenEntity = new AlmacenEntity();
-
-        almacenEntity.setNombre( almacenRequestDto.getNombre() );
-        almacenEntity.setDireccion( almacenRequestDto.getDireccion() );
 
         return almacenEntity;
     }

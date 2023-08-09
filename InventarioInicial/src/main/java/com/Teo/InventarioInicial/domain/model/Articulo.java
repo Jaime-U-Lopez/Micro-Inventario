@@ -6,14 +6,14 @@ public class Articulo {
     private String nombreArticulo;
     private String codigoArticulo;
     private String ubicacion;
+    private Integer cantidad;
     private Almacen almacen;
 
-
-    public Articulo( String nombreArticulo, String codigoArticulo, String ubicacion, Almacen almacen) {
-
+    public Articulo(String nombreArticulo, String codigoArticulo, String ubicacion, Integer cantidad, Almacen almacen) {
         this.nombreArticulo = nombreArticulo;
         this.codigoArticulo = codigoArticulo;
         this.ubicacion = ubicacion;
+        this.cantidad = cantidad;
         this.almacen = almacen;
     }
 
@@ -51,6 +51,14 @@ public class Articulo {
 
     public Almacen getAlmacen() {
         return almacen;
+    }
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
     }
 
     public void setAlmacen(Almacen almacen) {

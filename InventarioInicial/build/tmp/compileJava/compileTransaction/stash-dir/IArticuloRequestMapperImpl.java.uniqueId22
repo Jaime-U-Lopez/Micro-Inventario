@@ -1,56 +1,46 @@
-package com.Teo.InventarioInicial.adapters.jpa.mysql.mapper;
+package com.Teo.InventarioInicial.adapters.http.mapper;
 
+import com.Teo.InventarioInicial.adapters.http.dto.request.ArticuloRequestDto;
 import com.Teo.InventarioInicial.adapters.jpa.mysql.entity.AlmacenEntity;
 import com.Teo.InventarioInicial.adapters.jpa.mysql.entity.ArticuloEntity;
 import com.Teo.InventarioInicial.domain.model.Almacen;
 import com.Teo.InventarioInicial.domain.model.Articulo;
-import java.util.ArrayList;
-import java.util.List;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T14:56:51-0500",
+    date = "2023-08-09T14:52:48-0500",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 19.0.2 (Amazon.com Inc.)"
 )
 @Component
-public class ArticuloEntityMapperImpl implements ArticuloEntityMapper {
+public class IArticuloRequestMapperImpl implements IArticuloRequestMapper {
 
     @Override
-    public Articulo articuloEntityToArticulo(ArticuloEntity articuloEntity) {
-        if ( articuloEntity == null ) {
+    public Articulo toArticulo(ArticuloRequestDto articuloRequestDto) {
+        if ( articuloRequestDto == null ) {
             return null;
         }
 
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
-        Integer cantidad = null;
+        String cantidad = null;
         Almacen almacen = null;
 
-        nombreArticulo = articuloEntity.getNombreArticulo();
-        codigoArticulo = articuloEntity.getCodigoArticulo();
-        ubicacion = articuloEntity.getUbicacion();
-        cantidad = articuloEntity.getCantidad();
-        almacen = almacenEntityToAlmacen( articuloEntity.getAlmacen() );
-
         Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
-
-        articulo.setId( articuloEntity.getId() );
 
         return articulo;
     }
 
     @Override
-    public ArticuloEntity articuloToArticuloEntity(Articulo articulo) {
+    public ArticuloEntity toArticuloEntity(Articulo articulo) {
         if ( articulo == null ) {
             return null;
         }
 
         ArticuloEntity articuloEntity = new ArticuloEntity();
 
-        articuloEntity.setCantidad( articulo.getCantidad() );
         articuloEntity.setId( articulo.getId() );
         articuloEntity.setNombreArticulo( articulo.getNombreArticulo() );
         articuloEntity.setCodigoArticulo( articulo.getCodigoArticulo() );
@@ -61,17 +51,42 @@ public class ArticuloEntityMapperImpl implements ArticuloEntityMapper {
     }
 
     @Override
-    public List<Articulo> toArticuloList(List<ArticuloEntity> articuloEntityList) {
-        if ( articuloEntityList == null ) {
+    public Articulo toArticulo(ArticuloEntity articuloEntity) {
+        if ( articuloEntity == null ) {
             return null;
         }
 
-        List<Articulo> list = new ArrayList<Articulo>( articuloEntityList.size() );
-        for ( ArticuloEntity articuloEntity : articuloEntityList ) {
-            list.add( articuloEntityToArticulo( articuloEntity ) );
+        String nombreArticulo = null;
+        String codigoArticulo = null;
+        String ubicacion = null;
+        Almacen almacen = null;
+        String cantidad = null;
+
+        nombreArticulo = articuloEntity.getNombreArticulo();
+        codigoArticulo = articuloEntity.getCodigoArticulo();
+        ubicacion = articuloEntity.getUbicacion();
+        almacen = almacenEntityToAlmacen( articuloEntity.getAlmacen() );
+        cantidad = articuloEntity.getCantidad();
+
+        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
+
+        articulo.setId( articuloEntity.getId() );
+
+        return articulo;
+    }
+
+    protected AlmacenEntity almacenToAlmacenEntity(Almacen almacen) {
+        if ( almacen == null ) {
+            return null;
         }
 
-        return list;
+        AlmacenEntity almacenEntity = new AlmacenEntity();
+
+        almacenEntity.setId( almacen.getId() );
+        almacenEntity.setNombre( almacen.getNombre() );
+        almacenEntity.setDireccion( almacen.getDireccion() );
+
+        return almacenEntity;
     }
 
     protected Almacen almacenEntityToAlmacen(AlmacenEntity almacenEntity) {
@@ -90,19 +105,5 @@ public class ArticuloEntityMapperImpl implements ArticuloEntityMapper {
         almacen.setId( almacenEntity.getId() );
 
         return almacen;
-    }
-
-    protected AlmacenEntity almacenToAlmacenEntity(Almacen almacen) {
-        if ( almacen == null ) {
-            return null;
-        }
-
-        AlmacenEntity almacenEntity = new AlmacenEntity();
-
-        almacenEntity.setId( almacen.getId() );
-        almacenEntity.setNombre( almacen.getNombre() );
-        almacenEntity.setDireccion( almacen.getDireccion() );
-
-        return almacenEntity;
     }
 }

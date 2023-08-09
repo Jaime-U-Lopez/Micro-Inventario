@@ -12,6 +12,6 @@ import java.util.List;
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface ArticuloEntityMapper {
    Articulo articuloEntityToArticulo(ArticuloEntity articuloEntity);
-   ArticuloEntity articulotoArticuloEntity(Articulo articulo);
+   ArticuloEntity articuloToArticuloEntity(Articulo articulo);
     List<Articulo> toArticuloList(List<ArticuloEntity> articuloEntityList);
 }

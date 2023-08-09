@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T11:57:22-0500",
+    date = "2023-08-09T14:52:48-0500",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 19.0.2 (Amazon.com Inc.)"
 )
 @Component
@@ -42,13 +42,17 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
+        AlmacenEntity almacen = null;
 
         id = articulo.getId();
         nombreArticulo = articulo.getNombreArticulo();
         codigoArticulo = articulo.getCodigoArticulo();
         ubicacion = articulo.getUbicacion();
+        almacen = almacenToAlmacenEntity( articulo.getAlmacen() );
 
-        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion );
+        Integer cantidad = null;
+
+        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         return articuloResponseDto;
     }
@@ -63,13 +67,19 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
+        Integer cantidad = null;
+        AlmacenEntity almacen = null;
 
         id = articuloEntity.getId();
         nombreArticulo = articuloEntity.getNombreArticulo();
         codigoArticulo = articuloEntity.getCodigoArticulo();
         ubicacion = articuloEntity.getUbicacion();
+        if ( articuloEntity.getCantidad() != null ) {
+            cantidad = Integer.parseInt( articuloEntity.getCantidad() );
+        }
+        almacen = articuloEntity.getAlmacen();
 
-        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion );
+        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         return articuloResponseDto;
     }
@@ -82,10 +92,14 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
 
         ArticuloEntity articuloEntity = new ArticuloEntity();
 
+        if ( articuloResponseDto.getCantidad() != null ) {
+            articuloEntity.setCantidad( String.valueOf( articuloResponseDto.getCantidad() ) );
+        }
         articuloEntity.setId( articuloResponseDto.getId() );
         articuloEntity.setNombreArticulo( articuloResponseDto.getNombreArticulo() );
         articuloEntity.setCodigoArticulo( articuloResponseDto.getCodigoArticulo() );
         articuloEntity.setUbicacion( articuloResponseDto.getUbicacion() );
+        articuloEntity.setAlmacen( articuloResponseDto.getAlmacen() );
 
         return articuloEntity;
     }
@@ -100,17 +114,33 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         String codigoArticulo = null;
         String ubicacion = null;
         Almacen almacen = null;
+        String cantidad = null;
 
         nombreArticulo = articuloEntity.getNombreArticulo();
         codigoArticulo = articuloEntity.getCodigoArticulo();
         ubicacion = articuloEntity.getUbicacion();
         almacen = almacenEntityToAlmacen( articuloEntity.getAlmacen() );
+        cantidad = articuloEntity.getCantidad();
 
-        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, almacen );
+        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         articulo.setId( articuloEntity.getId() );
 
         return articulo;
+    }
+
+    protected AlmacenEntity almacenToAlmacenEntity(Almacen almacen) {
+        if ( almacen == null ) {
+            return null;
+        }
+
+        AlmacenEntity almacenEntity = new AlmacenEntity();
+
+        almacenEntity.setId( almacen.getId() );
+        almacenEntity.setNombre( almacen.getNombre() );
+        almacenEntity.setDireccion( almacen.getDireccion() );
+
+        return almacenEntity;
     }
 
     protected Almacen almacenEntityToAlmacen(AlmacenEntity almacenEntity) {

@@ -25,16 +25,26 @@ public class ArticuloEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+
     private String nombreArticulo;
-    @Column(unique = true)
+    //@Column(unique = true)
     private String codigoArticulo;
 
     private String ubicacion;
 
+    private Integer cantidad;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "almacen_id")  // Nombre de la columna en esta entidad que hace referencia a la otra entidad
     private AlmacenEntity almacen;
+
+    public Integer getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Integer cantidad) {
+        this.cantidad = cantidad;
+    }
 
     public Long getId() {
         return id;

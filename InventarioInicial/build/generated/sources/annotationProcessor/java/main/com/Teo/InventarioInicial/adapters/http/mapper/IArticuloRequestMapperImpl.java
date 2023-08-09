@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T12:30:38-0500",
+    date = "2023-08-09T14:56:51-0500",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 19.0.2 (Amazon.com Inc.)"
 )
 @Component
@@ -25,14 +25,10 @@ public class IArticuloRequestMapperImpl implements IArticuloRequestMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
-
-        nombreArticulo = articuloRequestDto.getNombreArticulo();
-        codigoArticulo = articuloRequestDto.getCodigoArticulo();
-        ubicacion = articuloRequestDto.getUbicacion();
-
+        Integer cantidad = null;
         Almacen almacen = null;
 
-        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, almacen );
+        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         return articulo;
     }
@@ -45,6 +41,7 @@ public class IArticuloRequestMapperImpl implements IArticuloRequestMapper {
 
         ArticuloEntity articuloEntity = new ArticuloEntity();
 
+        articuloEntity.setCantidad( articulo.getCantidad() );
         articuloEntity.setId( articulo.getId() );
         articuloEntity.setNombreArticulo( articulo.getNombreArticulo() );
         articuloEntity.setCodigoArticulo( articulo.getCodigoArticulo() );
@@ -63,14 +60,16 @@ public class IArticuloRequestMapperImpl implements IArticuloRequestMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
+        Integer cantidad = null;
         Almacen almacen = null;
 
         nombreArticulo = articuloEntity.getNombreArticulo();
         codigoArticulo = articuloEntity.getCodigoArticulo();
         ubicacion = articuloEntity.getUbicacion();
+        cantidad = articuloEntity.getCantidad();
         almacen = almacenEntityToAlmacen( articuloEntity.getAlmacen() );
 
-        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, almacen );
+        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         articulo.setId( articuloEntity.getId() );
 

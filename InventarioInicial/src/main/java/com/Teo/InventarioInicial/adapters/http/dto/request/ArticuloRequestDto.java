@@ -6,10 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NegativeOrZero;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 
@@ -17,6 +14,7 @@ import jakarta.validation.constraints.Positive;
 
 @Getter
 @Setter
+@Data
 public class ArticuloRequestDto {
 
     @NotBlank
@@ -25,15 +23,18 @@ public class ArticuloRequestDto {
     private String codigoArticulo;
     @NotBlank
     private String ubicacion;
+    @Positive(message = "La cantidad No puede ser negativo o cero (0)")
+    private Integer cantidad;
 
     @NotNull
     @Positive(message = "El Id no puede ser negativo o cero (0)")
     private Long idAlmacen;
 
-    public ArticuloRequestDto(String nombreArticulo, String codigoArticulo, String ubicacion, Long idAlmacen) {
+    public ArticuloRequestDto(String nombreArticulo, String codigoArticulo, String ubicacion, Integer cantidad, @NotNull Long idAlmacen) {
         this.nombreArticulo = nombreArticulo;
         this.codigoArticulo = codigoArticulo;
         this.ubicacion = ubicacion;
+        this.cantidad = cantidad;
         this.idAlmacen = idAlmacen;
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-08-09T13:20:22-0500",
+    date = "2023-08-09T14:56:51-0500",
     comments = "version: 1.5.3.Final, compiler: IncrementalProcessingEnvironment from gradle-language-java-8.2.1.jar, environment: Java 19.0.2 (Amazon.com Inc.)"
 )
 @Component
@@ -42,15 +42,17 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
+        Integer cantidad = null;
         AlmacenEntity almacen = null;
 
         id = articulo.getId();
         nombreArticulo = articulo.getNombreArticulo();
         codigoArticulo = articulo.getCodigoArticulo();
         ubicacion = articulo.getUbicacion();
+        cantidad = articulo.getCantidad();
         almacen = almacenToAlmacenEntity( articulo.getAlmacen() );
 
-        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion, almacen );
+        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         return articuloResponseDto;
     }
@@ -65,15 +67,17 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
+        Integer cantidad = null;
         AlmacenEntity almacen = null;
 
         id = articuloEntity.getId();
         nombreArticulo = articuloEntity.getNombreArticulo();
         codigoArticulo = articuloEntity.getCodigoArticulo();
         ubicacion = articuloEntity.getUbicacion();
+        cantidad = articuloEntity.getCantidad();
         almacen = articuloEntity.getAlmacen();
 
-        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion, almacen );
+        ArticuloResponseDto articuloResponseDto = new ArticuloResponseDto( id, nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         return articuloResponseDto;
     }
@@ -85,6 +89,13 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         }
 
         ArticuloEntity articuloEntity = new ArticuloEntity();
+
+        articuloEntity.setCantidad( articuloResponseDto.getCantidad() );
+        articuloEntity.setId( articuloResponseDto.getId() );
+        articuloEntity.setNombreArticulo( articuloResponseDto.getNombreArticulo() );
+        articuloEntity.setCodigoArticulo( articuloResponseDto.getCodigoArticulo() );
+        articuloEntity.setUbicacion( articuloResponseDto.getUbicacion() );
+        articuloEntity.setAlmacen( articuloResponseDto.getAlmacen() );
 
         return articuloEntity;
     }
@@ -98,14 +109,16 @@ public class IArticuloResponseMapperImpl implements IArticuloResponseMapper {
         String nombreArticulo = null;
         String codigoArticulo = null;
         String ubicacion = null;
+        Integer cantidad = null;
         Almacen almacen = null;
 
         nombreArticulo = articuloEntity.getNombreArticulo();
         codigoArticulo = articuloEntity.getCodigoArticulo();
         ubicacion = articuloEntity.getUbicacion();
+        cantidad = articuloEntity.getCantidad();
         almacen = almacenEntityToAlmacen( articuloEntity.getAlmacen() );
 
-        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, almacen );
+        Articulo articulo = new Articulo( nombreArticulo, codigoArticulo, ubicacion, cantidad, almacen );
 
         articulo.setId( articuloEntity.getId() );
 
