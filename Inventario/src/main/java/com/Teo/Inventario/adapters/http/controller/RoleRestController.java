@@ -1,9 +1,5 @@
 package com.Teo.Inventario.adapters.http.controller;
 
-import com.pragma.usuariomicroservice.adapters.http.dto.request.RolRequestDto;
-import com.pragma.usuariomicroservice.adapters.http.dto.response.RolResponseDto;
-import com.pragma.usuariomicroservice.adapters.http.handlers.IRoleHandler;
-import com.pragma.usuariomicroservice.configuration.Constants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
