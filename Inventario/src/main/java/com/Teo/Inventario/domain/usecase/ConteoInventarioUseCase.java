@@ -1,48 +1,40 @@
 package com.Teo.Inventario.domain.usecase;
 
-public class ConteoInventarioUseCase {
+import com.Teo.Inventario.domain.api.IConteoInventarioServicePort;
+import com.Teo.Inventario.domain.model.ConteoInventario;
+import com.Teo.Inventario.domain.model.GruposDeConteo;
+import com.Teo.Inventario.domain.spi.IConteoInventarioPersistencePort;
 
-    private Long id;
-    private String codigoArticulo;
-    private String cantidad;
-    private String ubicacion;
+import java.util.List;
 
-    public ConteoInventarioUseCase(Long id, String codigoArticulo, String cantidad, String ubicacion) {
-        this.id = id;
-        this.codigoArticulo = codigoArticulo;
-        this.cantidad = cantidad;
-        this.ubicacion = ubicacion;
+public class ConteoInventarioUseCase implements IConteoInventarioServicePort {
+
+
+
+    private final IConteoInventarioPersistencePort conteoInventarioPersistencePort;
+
+
+    public ConteoInventarioUseCase(IConteoInventarioPersistencePort conteoInventarioPersistencePort) {
+        this.conteoInventarioPersistencePort = conteoInventarioPersistencePort;
     }
 
-    public Long getId() {
-        return id;
+    @Override
+    public void saveConteoInventario(ConteoInventario conteoInventario) {
+
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    @Override
+    public void deleteConteoInventario(ConteoInventario conteoInventario) {
+
     }
 
-    public String getCodigoArticulo() {
-        return codigoArticulo;
+    @Override
+    public ConteoInventario getConteoInventario(Long id) {
+        return null;
     }
 
-    public void setCodigoArticulo(String codigoArticulo) {
-        this.codigoArticulo = codigoArticulo;
-    }
-
-    public String getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(String cantidad) {
-        this.cantidad = cantidad;
-    }
-
-    public String getUbicacion() {
-        return ubicacion;
-    }
-
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
+    @Override
+    public List<GruposDeConteo> getAllConteoInventario() {
+        return null;
     }
 }

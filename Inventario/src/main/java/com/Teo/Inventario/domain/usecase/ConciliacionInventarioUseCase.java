@@ -2,21 +2,17 @@ package com.Teo.Inventario.domain.usecase;
 
 import com.Teo.Inventario.domain.api.IInventarioInicialServicePort;
 import com.Teo.Inventario.domain.model.InventarioInicial;
-import com.Teo.Inventario.domain.spi.IConteoInventarioPersistencePort;
-import com.Teo.Inventario.domain.spi.IInventarioInicialPersistencePort;
+import com.Teo.Inventario.domain.spi.IConciliacionInventarioPersistencePort;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
-public class InventarioInicialUseCase implements IInventarioInicialServicePort {
+public class ConciliacionInventarioUseCase implements IInventarioInicialServicePort {
 
 
-    private final IConteoInventarioPersistencePort conteoInventarioPersistencePort;
+    private final IConciliacionInventarioPersistencePort conciliacionInventarioPersistencePort;
 
-    public InventarioInicialUseCase(IConteoInventarioPersistencePort conteoInventarioPersistencePort) {
-        this.conteoInventarioPersistencePort = conteoInventarioPersistencePort;
+    public ConciliacionInventarioUseCase(IConciliacionInventarioPersistencePort conciliacionInventarioPersistencePort) {
+        this.conciliacionInventarioPersistencePort = conciliacionInventarioPersistencePort;
     }
 
     @Override

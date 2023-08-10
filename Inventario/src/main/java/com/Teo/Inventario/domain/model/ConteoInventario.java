@@ -7,8 +7,8 @@ public class ConteoInventario {
     private String cantidad;
     private String ubicacion;
 
-    public ConteoInventario(Long id, String codigoArticulo, String cantidad, String ubicacion) {
-        this.id = id;
+
+    public ConteoInventario(String codigoArticulo, String cantidad, String ubicacion) {
         this.codigoArticulo = codigoArticulo;
         this.cantidad = cantidad;
         this.ubicacion = ubicacion;

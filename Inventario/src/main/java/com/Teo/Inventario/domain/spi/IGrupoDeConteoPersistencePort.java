@@ -10,7 +10,7 @@ public interface IGrupoDeConteoPersistencePort {
 
     void deleteGrupoDeConteo(GruposDeConteo gruposDeConteo);
 
-    GruposDeConteo getUsuario(Long id);
+    GruposDeConteo getGrupoDeConteo(Long id);
 
 
     List<GruposDeConteo> getAllGruposDeConteo();
