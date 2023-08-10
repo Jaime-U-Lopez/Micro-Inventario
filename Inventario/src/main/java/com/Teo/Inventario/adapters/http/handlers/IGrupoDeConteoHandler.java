@@ -1,13 +1,20 @@
 package com.Teo.Inventario.adapters.http.handlers;
 
+import com.Teo.Inventario.adapters.http.dto.request.GrupoDeConteoRequestDto;
+import com.Teo.Inventario.adapters.http.dto.response.InventarioIniciaResponseDto;
+
+import java.util.List;
+
 public interface IGrupoDeConteoHandler {
 
-    void saveUser(UsuarioRequestDto usuarioRequestDto);
+    void saveGrupoDeConteo(GrupoDeConteoRequestDto grupoDeConteoRequestDto);
 
-    void deleteUsuario(UsuarioRequestDto usuarioRequestDto);
+    void deleteGrupoDeConteo(Long id);
 
-    UsuarioResponseDto getUsuario(Long id);
+    GrupoDeConteoRequestDto getGrupoDeConteo(Long id);
 
+
+    List<GrupoDeConteoRequestDto> getAllGrupoDeConteo();
 
 
 

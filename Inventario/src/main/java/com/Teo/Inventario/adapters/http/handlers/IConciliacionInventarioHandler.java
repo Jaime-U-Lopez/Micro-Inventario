@@ -1,16 +1,21 @@
 package com.Teo.Inventario.adapters.http.handlers;
 
 
+import com.Teo.Inventario.adapters.http.dto.request.ConciliacionInventarioRequestDto;
+import com.Teo.Inventario.adapters.http.dto.response.ConciliacionInventarioResponseDto;
+import com.Teo.Inventario.adapters.http.dto.response.ConteoInventarioResponseDto;
+
+import java.util.List;
 
 public interface IConciliacionInventarioHandler {
 
-    void saveUser(UsuarioRequestDto usuarioRequestDto);
+    void saveConciliacionInventario(ConciliacionInventarioRequestDto conciliacionInventarioRequestDto);
 
-    void deleteUsuario(UsuarioRequestDto usuarioRequestDto);
+    void deleteConciliacionInventario(Long id);
 
-    UsuarioResponseDto getUsuario(Long id);
+    ConciliacionInventarioResponseDto getConciliacionInventario(Long id);
 
-
+    List<ConciliacionInventarioResponseDto> getAllConciliacionInventario();
 
 
 }

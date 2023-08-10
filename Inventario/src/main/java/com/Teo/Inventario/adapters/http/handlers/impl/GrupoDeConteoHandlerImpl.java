@@ -1,5 +1,29 @@
 package com.Teo.Inventario.adapters.http.handlers.impl;
 
-public class GrupoDeConteoHandlerImpl {
+import com.Teo.Inventario.adapters.http.dto.request.GrupoDeConteoRequestDto;
+import com.Teo.Inventario.adapters.http.handlers.IGrupoDeConteoHandler;
 
+import java.util.List;
+
+public class GrupoDeConteoHandlerImpl implements IGrupoDeConteoHandler {
+
+    @Override
+    public void saveGrupoDeConteo(GrupoDeConteoRequestDto grupoDeConteoRequestDto) {
+
+    }
+
+    @Override
+    public void deleteGrupoDeConteo(Long id) {
+
+    }
+
+    @Override
+    public GrupoDeConteoRequestDto getGrupoDeConteo(Long id) {
+        return null;
+    }
+
+    @Override
+    public List<GrupoDeConteoRequestDto> getAllGrupoDeConteo() {
+        return null;
+    }
 }
