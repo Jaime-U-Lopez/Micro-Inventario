@@ -1,9 +1,7 @@
 package com.Teo.Inventario.adapters.http.mapper;
-
-
-import com.pragma.usuariomicroservice.adapters.http.dto.request.RolRequestDto;
-import com.pragma.usuariomicroservice.adapters.http.dto.response.RolResponseDto;
-import com.pragma.usuariomicroservice.domain.model.Rol;
+import com.Teo.Inventario.adapters.http.dto.request.InventarioInicialRequestDto;
+import com.Teo.Inventario.adapters.http.dto.response.InventarioInicialResponseDto;
+import com.Teo.Inventario.domain.model.InventarioInicial;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
@@ -14,6 +12,6 @@ import java.util.List;
         unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface IInventarioInicialMapper {
 
-    Rol toRol(RolRequestDto rolRequestDto);
-    List<RolResponseDto> toResponseList(List<Rol> roleList);
+    InventarioInicial toInventarioInicial(InventarioInicialRequestDto inventarioInicialRequestDto);
+//    List<InventarioInicialResponseDto> toResponseList(List<InventarioInicial> inicialList);
 }

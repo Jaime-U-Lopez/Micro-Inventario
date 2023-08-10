@@ -1,12 +1,13 @@
 package com.Teo.Inventario.domain.usecase;
 
+import com.Teo.Inventario.domain.api.IConciliacionInventarioServicePort;
 import com.Teo.Inventario.domain.api.IInventarioInicialServicePort;
 import com.Teo.Inventario.domain.model.InventarioInicial;
 import com.Teo.Inventario.domain.spi.IConciliacionInventarioPersistencePort;
 
 import java.util.List;
 
-public class ConciliacionInventarioUseCase implements IInventarioInicialServicePort {
+public class ConciliacionInventarioUseCase implements IConciliacionInventarioServicePort {
 
 
     private final IConciliacionInventarioPersistencePort conciliacionInventarioPersistencePort;
@@ -15,29 +16,24 @@ public class ConciliacionInventarioUseCase implements IInventarioInicialServiceP
         this.conciliacionInventarioPersistencePort = conciliacionInventarioPersistencePort;
     }
 
+
     @Override
-    public void saveInventarioInicial(InventarioInicial inventarioInicial) {
+    public void saveConciliacionInventario(InventarioInicial inventarioInicial) {
 
     }
 
     @Override
-    public void deleteInventarioInicial(Long id) {
+    public void deleteConciliacionInventario(Long id) {
 
     }
 
     @Override
-    public InventarioInicial getInventarioInicial(Long id) {
+    public InventarioInicial getConciliacionInventario(Long id) {
         return null;
     }
 
     @Override
-    public List<InventarioInicial> getAllInventarioInicial() {
+    public List<InventarioInicial> getAllConciliacionInventario() {
         return null;
     }
-
-    //private final IInventarioInicialPersistencePort inventarioInicialPersistencePort;
-    //private final IRolRepository rolRepository;
-    //private final RolEntityMapper rolEntityMapper;
-
-
 }

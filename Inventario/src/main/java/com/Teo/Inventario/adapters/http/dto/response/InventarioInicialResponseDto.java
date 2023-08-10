@@ -1,6 +1,6 @@
-package com.Teo.Inventario.adapters.http.dto.request;
+package com.Teo.Inventario.adapters.http.dto.response;
 
-public class InventarioInicialRequestDto {
+public class InventarioInicialResponseDto {
 
     private Long id;
     private String codigoArticulo;

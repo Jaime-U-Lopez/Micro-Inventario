@@ -11,7 +11,7 @@ import org.mapstruct.ReportingPolicy;
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface GrupoDeConteoEntityMapper {
-    GruposDeConteoEntity toGruposDeConteoEntity(GruposDeConteo grupoDeConteo);
+//    GruposDeConteoEntity toGruposDeConteoEntity(GruposDeConteo grupoDeConteo);
 
     GruposDeConteo toGruposDeConteo(GruposDeConteoEntity grupoDeConteoEntity);
 

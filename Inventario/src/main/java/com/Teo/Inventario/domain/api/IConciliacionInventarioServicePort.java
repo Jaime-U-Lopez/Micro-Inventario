@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface IConciliacionInventarioServicePort {
 
-    void saveInventarioInicial(InventarioInicial  inventarioInicial);
+    void saveConciliacionInventario(InventarioInicial  inventarioInicial);
 
-    void deleteInventarioInicial(Long id);
+    void deleteConciliacionInventario(Long id);
 
-    InventarioInicial getInventarioInicial(Long id);
+    InventarioInicial getConciliacionInventario(Long id);
 
-    List<InventarioInicial> getAllInventarioInicial();
+    List<InventarioInicial> getAllConciliacionInventario();
 
 
 }

@@ -9,7 +9,7 @@ import org.mapstruct.ReportingPolicy;
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface ConciliacionInventarioEntityMapper {
-    ConciliacionInventarioEntity toConciliacionInventarioEntity(ConciliacionInventario conciliacionInventario);
+  //  ConciliacionInventarioEntity toConciliacionInventarioEntity(ConciliacionInventario conciliacionInventario);
 
     ConciliacionInventario toConciliacionInventario(ConciliacionInventarioEntity conciliacionInventarioEntity);
 

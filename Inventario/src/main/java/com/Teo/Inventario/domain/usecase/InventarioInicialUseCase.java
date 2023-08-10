@@ -13,10 +13,12 @@ import java.util.Set;
 public class InventarioInicialUseCase implements IInventarioInicialServicePort {
 
 
-    private final IConteoInventarioPersistencePort conteoInventarioPersistencePort;
 
-    public InventarioInicialUseCase(IConteoInventarioPersistencePort conteoInventarioPersistencePort) {
-        this.conteoInventarioPersistencePort = conteoInventarioPersistencePort;
+
+    private final IInventarioInicialPersistencePort inventarioInicialPersistencePort;
+
+    public InventarioInicialUseCase(IInventarioInicialPersistencePort inventarioInicialPersistencePort) {
+        this.inventarioInicialPersistencePort = inventarioInicialPersistencePort;
     }
 
     @Override

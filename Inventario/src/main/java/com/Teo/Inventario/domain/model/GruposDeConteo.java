@@ -3,11 +3,11 @@ package com.Teo.Inventario.domain.model;
 public class GruposDeConteo {
 
     private long id;
-
     private String grupo;
 
 
-    public GruposDeConteo(String grupo) {
+    public GruposDeConteo(long id, String grupo) {
+        this.id = id;
         this.grupo = grupo;
     }
 

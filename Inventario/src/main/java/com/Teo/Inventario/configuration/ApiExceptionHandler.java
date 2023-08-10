@@ -1,7 +1,6 @@
 package com.Teo.Inventario.configuration;
 
-import com.pragma.usuariomicroservice.adapters.http.exceptions.*;
-import com.pragma.usuariomicroservice.adapters.jpa.mysql.exceptions.UsuarioYaExistenteException;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -19,17 +18,10 @@ import java.util.List;
 @ControllerAdvice
 public class ApiExceptionHandler {
 
-    @ExceptionHandler(value={CorreoMalFormuladoException.class,
-            DocumentoMalFormuladoException.class,
-            CelularMalFormuladoException.class,
-            FechaNacimientoMalFormatoException.class,
-            NoEsMayorDeEdadException.class,
-            RolNoExiste.class,
-            RolNoExisteTipoRol.class,
-            RolExisteEnBaseDatos.class,
-            RoleInfoNotFoundException.class,
-            UsuarioYaExistenteException.class,
-            UsuarioNoSeEncuentraRegistradoException.class})
+    @ExceptionHandler(value={
+                     RoleInfoNotFoundException.class,
+
+    })
 
     public ResponseEntity<Object> BadRequestExceptionHandler(RuntimeException ex){
         ApiException apiException = new ApiException(

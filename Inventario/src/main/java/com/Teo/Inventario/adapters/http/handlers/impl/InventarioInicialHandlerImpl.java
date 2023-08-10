@@ -1,7 +1,7 @@
 package com.Teo.Inventario.adapters.http.handlers.impl;
 
 import com.Teo.Inventario.adapters.http.dto.request.InventarioInicialRequestDto;
-import com.Teo.Inventario.adapters.http.dto.response.InventarioIniciaResponseDto;
+import com.Teo.Inventario.adapters.http.dto.response.InventarioInicialResponseDto;
 import com.Teo.Inventario.adapters.http.handlers.IInventarioInicialHandler;
 
 import java.util.List;
@@ -20,12 +20,12 @@ public class InventarioInicialHandlerImpl implements IInventarioInicialHandler {
     }
 
     @Override
-    public InventarioIniciaResponseDto getInventarioInicial(Long id) {
+    public InventarioInicialResponseDto getInventarioInicial(Long id) {
         return null;
     }
 
     @Override
-    public List<InventarioIniciaResponseDto> getAllInventarioInicial() {
+    public List<InventarioInicialResponseDto> getAllInventarioInicial() {
         return null;
     }
 }

@@ -11,6 +11,6 @@ import org.mapstruct.ReportingPolicy;
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface ConteoInventarioEntityMapper {
-    ConteoInventarioEntity toConteoInventarioEntity(ConteoInventario conteoInventario);
+    //ConteoInventarioEntity toConteoInventarioEntity(ConteoInventario conteoInventario);
     ConteoInventario toConteoInventario(ConteoInventarioEntity conteoInventarioEntity);
 }
