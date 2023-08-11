@@ -4,9 +4,12 @@ package com.Teo.Inventario.adapters.http.handlers.impl;
 import com.Teo.Inventario.adapters.http.dto.request.ConciliacionInventarioRequestDto;
 import com.Teo.Inventario.adapters.http.dto.response.ConciliacionInventarioResponseDto;
 import com.Teo.Inventario.adapters.http.handlers.IConciliacionInventarioHandler;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@RequiredArgsConstructor
 public class ConciliacionInventarioHandlerImpl implements IConciliacionInventarioHandler {
 
 

@@ -27,12 +27,13 @@ public class Constants {
     public static final String ROL_YA_EXISTE = "Error el Rol con ese Id ya existe en la base de datos  ";
     public static final String NO_EXISTE_TIPO_ROL = "Error el Rol ingresado no existe entre las opciones de: CLIENTE - EMPLEADO - PROPIETARIO ";
     public static final String RESPONSE_MESSAGE_KEY = "mensaje";
-    public static final String PROPIETARIO_CREADO_MENSAJE = "El propietario fue creado satisfactoriamente.";
+    public static final String ENTIDAD_CREADO_MENSAJE = "Creado satisfactoriamente.";
+    public static final String ENTIDAD_ElIMINADA_MENSAJE = "Eliminado satisfactoriamente.";
     public static final String USUARIO_YA_EXISTE_CORREO = "El correo con el que intenta crear el usuario ya se encuentra registrado.";
     public static final String USUARIO_YA_EXISTE_DOCUMENTO = "El documento con el que intenta crear el usuario ya se encuentra registrado.";
     public static final String FECHA_NACIMIENTO_NO_EXISTE = "La fecha de nacimiento que ingreso no es valida porque es una fecha futura.";
-    public static final String SWAGGER_TITLE_MESSAGE = "User API Pragma Power Up";
-    public static final String SWAGGER_DESCRIPTION_MESSAGE = "User microservice";
+    public static final String SWAGGER_TITLE_MESSAGE = "Inventario API MPS TEO ";
+    public static final String SWAGGER_DESCRIPTION_MESSAGE = "Inventario microservice";
     public static final String SWAGGER_VERSION_MESSAGE = "1.0.0";
     public static final String SWAGGER_LICENSE_NAME_MESSAGE = "Apache 2.0";
     public static final String SWAGGER_LICENSE_URL_MESSAGE = "http://springdoc.org";

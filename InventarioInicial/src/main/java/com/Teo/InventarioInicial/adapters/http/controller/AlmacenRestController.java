@@ -61,7 +61,7 @@ public class AlmacenRestController {
                     @ApiResponse(responseCode = "404", description = "No data found",
                             content = @Content(mediaType = "application/json", schema = @Schema(ref = "#/components/schemas/Error")))})
     @PostMapping("/")
-    public ResponseEntity<Map<String, String>>  createAlmacen(@Valid @RequestBody AlmacenRequestDto requestDto ) {
+        public ResponseEntity<Map<String, String>>  createAlmacen(@Valid @RequestBody AlmacenRequestDto requestDto ) {
         almacenHandler.saveAlmacen(requestDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(
                 Collections.singletonMap(Constants.RESPONSE_MESSAGE_KEY,Constants.ALMACEN_CREADO_CON_EXITO)

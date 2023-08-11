@@ -81,7 +81,7 @@ public class ArticuloRestController {
                             content = @Content(mediaType = "application/json", schema = @Schema(ref = "#/components/schemas/Error")))})
 
     @DeleteMapping("")
-    public ResponseEntity<Map<String, String>> deleteUser(@Valid @RequestBody ArticuloRequestDtoDelete requestDto  ) {
+    public ResponseEntity<Map<String, String>> deleteArticulo(@Valid @RequestBody ArticuloRequestDtoDelete requestDto  ) {
         articuloHandler.deleteArticulo(requestDto);
         return ResponseEntity.ok(Collections.singletonMap(Constants.RESPONSE_MESSAGE_KEY, Constants.ARTICULO_ELIMINADO_CON_EXITO ));
     }

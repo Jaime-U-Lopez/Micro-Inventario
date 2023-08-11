@@ -1,5 +1,6 @@
 package com.Teo.Inventario.configuration;
 
+import com.Teo.Inventario.adapters.http.handlers.IConteoInventarioHandler;
 import com.Teo.Inventario.adapters.jpa.mysql.adapter.ConciliacionInventarioMysqlAdapter;
 import com.Teo.Inventario.adapters.jpa.mysql.adapter.ConteoInventarioMysqlAdapter;
 import com.Teo.Inventario.adapters.jpa.mysql.adapter.GruposDeControlMysqlAdapter;
@@ -41,6 +42,11 @@ public class BeanConfiguration {
     private final InventarioInicialEntityMapper inventarioInicialEntityMapper;
     private final IConciliacionInventarioRepository conciliacionInventarioRepository;
     private final ConciliacionInventarioEntityMapper conciliacionInventarioEntityMapper;
+
+
+
+
+
     @Bean
     public IConciliacionInventarioServicePort usuarioServicePort(){
         return new ConciliacionInventarioUseCase(conciliacionInventarioPersistencePort());
