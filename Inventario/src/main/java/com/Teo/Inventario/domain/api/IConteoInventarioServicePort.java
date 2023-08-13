@@ -9,10 +9,10 @@ public interface IConteoInventarioServicePort {
 
     void saveConteoInventario(ConteoInventario conteoInventario);
 
-    void deleteConteoInventario(ConteoInventario conteoInventario);
+    void deleteConteoInventario(Long id);
 
     ConteoInventario getConteoInventario(Long id);
 
 
-    List<GruposDeConteo> getAllConteoInventario();
+    List<ConteoInventario> getAllConteoInventario();
 }

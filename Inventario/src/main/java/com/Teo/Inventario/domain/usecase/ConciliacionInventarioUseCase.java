@@ -2,6 +2,7 @@ package com.Teo.Inventario.domain.usecase;
 
 import com.Teo.Inventario.domain.api.IConciliacionInventarioServicePort;
 import com.Teo.Inventario.domain.api.IInventarioInicialServicePort;
+import com.Teo.Inventario.domain.model.ConciliacionInventario;
 import com.Teo.Inventario.domain.model.InventarioInicial;
 import com.Teo.Inventario.domain.spi.IConciliacionInventarioPersistencePort;
 
@@ -16,24 +17,23 @@ public class ConciliacionInventarioUseCase implements IConciliacionInventarioSer
         this.conciliacionInventarioPersistencePort = conciliacionInventarioPersistencePort;
     }
 
-
     @Override
-    public void saveConciliacionInventario(InventarioInicial inventarioInicial) {
-
+    public void saveConciliacionInventario(ConciliacionInventario conciliacionInventario) {
+       this.saveConciliacionInventario(conciliacionInventario);
     }
 
     @Override
     public void deleteConciliacionInventario(Long id) {
-
+       this.conciliacionInventarioPersistencePort.deleteConciliacionInventario(id);
     }
 
     @Override
-    public InventarioInicial getConciliacionInventario(Long id) {
-        return null;
+    public ConciliacionInventario getConciliacionInventario(Long id) {
+        return this.conciliacionInventarioPersistencePort.getConciliacionInventario(id);
     }
 
     @Override
-    public List<InventarioInicial> getAllConciliacionInventario() {
-        return null;
+    public List<ConciliacionInventario> getAllConciliacionInventario() {
+        return this.conciliacionInventarioPersistencePort.getAllConciliacionInventario();
     }
 }

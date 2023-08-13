@@ -12,7 +12,9 @@ import java.util.Set;
 
 public class InventarioInicialUseCase implements IInventarioInicialServicePort {
 
-
+    //private final IInventarioInicialPersistencePort inventarioInicialPersistencePort;
+    //private final IRolRepository rolRepository;
+    //private final RolEntityMapper rolEntityMapper;
 
 
     private final IInventarioInicialPersistencePort inventarioInicialPersistencePort;
@@ -23,27 +25,25 @@ public class InventarioInicialUseCase implements IInventarioInicialServicePort {
 
     @Override
     public void saveInventarioInicial(InventarioInicial inventarioInicial) {
-
+    this.inventarioInicialPersistencePort.saveInventarioInicial(inventarioInicial);
     }
 
     @Override
     public void deleteInventarioInicial(Long id) {
-
+    this.inventarioInicialPersistencePort.deleteInventarioInicial(id);
     }
 
     @Override
     public InventarioInicial getInventarioInicial(Long id) {
-        return null;
+        return this.inventarioInicialPersistencePort.getInventarioInicial(id);
     }
 
     @Override
     public List<InventarioInicial> getAllInventarioInicial() {
-        return null;
+        return this.inventarioInicialPersistencePort.getAllInventarioInicial();
     }
 
-    //private final IInventarioInicialPersistencePort inventarioInicialPersistencePort;
-    //private final IRolRepository rolRepository;
-    //private final RolEntityMapper rolEntityMapper;
+
 
 
 }

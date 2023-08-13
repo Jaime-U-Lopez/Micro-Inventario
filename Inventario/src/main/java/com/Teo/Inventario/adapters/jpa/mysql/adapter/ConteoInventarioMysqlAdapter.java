@@ -20,7 +20,7 @@ public class ConteoInventarioMysqlAdapter implements IConteoInventarioPersistenc
 
     @Override
     public void saveConteoInventario(ConteoInventario conteoInventario) {
-
+        this.conteoInventarioRepository.saveAndFlush(conteoInventarioEntityMapper.toConteoInventarioEntity(conteoInventario));
     }
 
     @Override
@@ -30,7 +30,7 @@ public class ConteoInventarioMysqlAdapter implements IConteoInventarioPersistenc
 
     @Override
     public ConteoInventario getConteoInventario(Long id) {
-        return null;
+        return conteoInventarioEntityMapper.toConteoInventario(conteoInventarioRepository.findById(id).get());
     }
 
     @Override

@@ -20,21 +20,23 @@ public class ConteoInventarioUseCase implements IConteoInventarioServicePort {
 
     @Override
     public void saveConteoInventario(ConteoInventario conteoInventario) {
-
+        this.conteoInventarioPersistencePort.saveConteoInventario(conteoInventario);
     }
 
     @Override
-    public void deleteConteoInventario(ConteoInventario conteoInventario) {
-
+    public void deleteConteoInventario(Long id) {
+this.conteoInventarioPersistencePort.deleteConteoInventario(id);
     }
 
     @Override
     public ConteoInventario getConteoInventario(Long id) {
-        return null;
+        return this.conteoInventarioPersistencePort.getConteoInventario(id);
     }
 
     @Override
-    public List<GruposDeConteo> getAllConteoInventario() {
-        return null;
+    public List<ConteoInventario> getAllConteoInventario() {
+        return this.conteoInventarioPersistencePort.getAllConteoInventario();
+
     }
+
 }

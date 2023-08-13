@@ -7,10 +7,14 @@ import com.Teo.Inventario.domain.model.ConteoInventario;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring",
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface ConteoInventarioEntityMapper {
-    //ConteoInventarioEntity toConteoInventarioEntity(ConteoInventario conteoInventario);
+    ConteoInventarioEntity toConteoInventarioEntity(ConteoInventario conteoInventario);
     ConteoInventario toConteoInventario(ConteoInventarioEntity conteoInventarioEntity);
+
+    List<ConteoInventario> toConteoInventarioList(List<ConteoInventarioEntity> conteoInventarioEntityList);
 }

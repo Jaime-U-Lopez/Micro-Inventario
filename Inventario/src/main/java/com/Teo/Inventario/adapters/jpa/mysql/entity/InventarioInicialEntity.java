@@ -18,6 +18,6 @@ public class InventarioInicialEntity {
     private String codigoArticulo;
     private String cantidad;
     private String ubicacion;
-    private String AlmacenNombre;
+    private String Nombrealmacen;
 
 }

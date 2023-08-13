@@ -11,6 +11,6 @@ import org.mapstruct.ReportingPolicy;
 public interface ConciliacionInventarioEntityMapper {
   //  ConciliacionInventarioEntity toConciliacionInventarioEntity(ConciliacionInventario conciliacionInventario);
 
-    ConciliacionInventario toConciliacionInventario(ConciliacionInventarioEntity conciliacionInventarioEntity);
+  //  ConciliacionInventario toConciliacionInventario(ConciliacionInventarioEntity conciliacionInventarioEntity);
 
 }

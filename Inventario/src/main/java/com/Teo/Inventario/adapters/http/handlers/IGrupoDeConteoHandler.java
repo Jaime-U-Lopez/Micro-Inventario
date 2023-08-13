@@ -1,6 +1,7 @@
 package com.Teo.Inventario.adapters.http.handlers;
 
 import com.Teo.Inventario.adapters.http.dto.request.GrupoDeConteoRequestDto;
+import com.Teo.Inventario.adapters.http.dto.response.GrupoDeConteoResponseDto;
 
 import java.util.List;
 
@@ -10,11 +11,10 @@ public interface IGrupoDeConteoHandler {
 
     void deleteGrupoDeConteo(Long id);
 
-    GrupoDeConteoRequestDto getGrupoDeConteo(Long id);
+    GrupoDeConteoResponseDto getGrupoDeConteo(Long id);
 
 
-    List<GrupoDeConteoRequestDto> getAllGrupoDeConteo();
-
+    List<GrupoDeConteoResponseDto> getAllGrupoDeConteo();
 
 
 }

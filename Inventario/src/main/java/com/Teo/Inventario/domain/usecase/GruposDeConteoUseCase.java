@@ -17,21 +17,22 @@ public class GruposDeConteoUseCase implements IGrupoDeConteoServicePort {
 
     @Override
     public void saveGrupoDeConteo(GruposDeConteo gruposDeConteo) {
-
+    grupoDeConteoPersistencePort.saveGrupoDeConteo(gruposDeConteo);
     }
 
     @Override
     public void deleteGrupoDeConteo(Long id) {
 
+    grupoDeConteoPersistencePort.deleteGrupoDeConteo(id);
     }
 
     @Override
     public GruposDeConteo getGruposDeConteo(Long id) {
-        return null;
+        return grupoDeConteoPersistencePort.getGrupoDeConteo(id);
     }
 
     @Override
     public List<GruposDeConteo> getAllGruposDeConteo() {
-        return null;
+        return grupoDeConteoPersistencePort.getAllGruposDeConteo();
     }
 }

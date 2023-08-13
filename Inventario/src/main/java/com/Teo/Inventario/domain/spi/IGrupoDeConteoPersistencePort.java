@@ -8,7 +8,7 @@ public interface IGrupoDeConteoPersistencePort {
 
     void saveGrupoDeConteo(GruposDeConteo gruposDeConteo);
 
-    void deleteGrupoDeConteo(GruposDeConteo gruposDeConteo);
+    void deleteGrupoDeConteo(Long id );
 
     GruposDeConteo getGrupoDeConteo(Long id);
 

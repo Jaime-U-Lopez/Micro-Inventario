@@ -8,6 +8,7 @@ public class ConteoInventario {
     private String ubicacion;
 
 
+
     public ConteoInventario(String codigoArticulo, String cantidad, String ubicacion) {
         this.codigoArticulo = codigoArticulo;
         this.cantidad = cantidad;

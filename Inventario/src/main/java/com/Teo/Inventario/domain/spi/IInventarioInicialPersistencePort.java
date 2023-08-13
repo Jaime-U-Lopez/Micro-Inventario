@@ -8,7 +8,7 @@ public interface IInventarioInicialPersistencePort {
 
     void saveInventarioInicial(InventarioInicial inventarioInicial);
 
-    void deleteInventarioInicial(InventarioInicial inventarioInicial);
+    void deleteInventarioInicial(Long id);
 
     InventarioInicial getInventarioInicial(Long id);
 

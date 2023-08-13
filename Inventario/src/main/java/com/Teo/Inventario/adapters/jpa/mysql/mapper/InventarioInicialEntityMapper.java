@@ -7,11 +7,15 @@ import com.Teo.Inventario.domain.model.InventarioInicial;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring",
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface InventarioInicialEntityMapper {
     InventarioInicialEntity toInventarioInicialEntity(InventarioInicial inventarioInicial);
     InventarioInicial toInventarioInicial(InventarioInicialEntity InventarioInicialEntity);
+
+    List <InventarioInicial> toInventarioInicialList(List<InventarioInicialEntity> InventarioInicialEntityList);
 
 }

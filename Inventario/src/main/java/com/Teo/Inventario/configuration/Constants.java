@@ -22,6 +22,10 @@ public class Constants {
     public static final String FECHA_NACIMIENTO_MAL_FORMATO  = "La fecha de nacimiento no tiene el formato correcto.";
     public static final String NO_ES_MAYOR_DE_EDAD = "El propietario debe ser mayor de edad.";
     public static final String USUARIO_ELIMINADO_CON_EXITO = "El usuario fue eliminado con exito";
+
+    public static final String ENTITY_NO_EXISTE_BASE_DE_DATOS = "la entidad no existe en la base de datos ";
+
+
     public static final String ROL_ELIMINADO_CON_EXITO = "El Rol fue eliminado con exito";
     public static final String ROL_CREADO_CON_EXITO = "El Rol fue creado  con exito";
     public static final String ROL_YA_EXISTE = "Error el Rol con ese Id ya existe en la base de datos  ";

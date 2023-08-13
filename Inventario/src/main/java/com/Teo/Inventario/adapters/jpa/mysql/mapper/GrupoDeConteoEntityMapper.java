@@ -7,12 +7,15 @@ import com.Teo.Inventario.domain.model.GruposDeConteo;
 import org.mapstruct.Mapper;
 import org.mapstruct.ReportingPolicy;
 
+import java.util.List;
+
 @Mapper(componentModel = "spring",
         unmappedTargetPolicy = ReportingPolicy.IGNORE,
         unmappedSourcePolicy = ReportingPolicy.ERROR)
 public interface GrupoDeConteoEntityMapper {
-//    GruposDeConteoEntity toGruposDeConteoEntity(GruposDeConteo grupoDeConteo);
+   GruposDeConteoEntity toGruposDeConteoEntity(GruposDeConteo grupoDeConteo);
 
     GruposDeConteo toGruposDeConteo(GruposDeConteoEntity grupoDeConteoEntity);
 
+    List<GruposDeConteo> toGruposDeConteoList(List<GruposDeConteoEntity> gruposDeConteoEntityList);
 }
